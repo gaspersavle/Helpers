@@ -2,7 +2,7 @@
 
 # Source ROS distro environment and local catwin workspace
 #source "/opt/ros/$ROS_DISTRO/setup.bash" && source "$CATKIN_WS/devel/setup.bash" && source "$CATKIN_WS/install/setup.bash"
-catkin_make
+
 source "/opt/ros/$ROS_DISTRO/setup.bash"
 # ROS screws up the PYTHONPATH by also adding python2 path.
 # I tried doing this, but it breaks ROS as well :(
@@ -36,6 +36,11 @@ echo $LD_LIBRARY_PATH
 # fi
 
 DIR_ALPHAROS=/root/catkin_ws/src/nn_pipeline/AlphaROS
+DIR_CATWS=/root/catkin_ws/
+
+cd $DIR_CATWS
+catkin_make
+source devel/setup.bash
 
 # now cd to the right directory
 if [ -d "$DIR_ALPHAROS" ]; then
