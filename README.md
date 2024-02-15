@@ -97,7 +97,7 @@ sudo dpkg -i <the name of your downloaded dependancy file>
 sudo dpkg -i libseccomp2_2.5.4-1+b3_armhf.deb
 ```
 
-### 2.3 Installing the previously downloaded dependancy
+### 2.3 Installing the previously downloaded dependency
 Run the following command to install the dependancy (you should be working in the directory where the file is located):
 ```shell
 sudo apt install buster-backports libseccomp2
